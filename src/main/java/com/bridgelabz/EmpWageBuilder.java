@@ -6,14 +6,15 @@ class EmpWageBuilder {
     private static final int IS_PRESENT = 1;
     private static final int IS_ABSENT = 0;
     public static void main(String[] args){
-
-        int empCheck =(int) Math.floor((Math.random() * 10)) % 2;
-
-        if(empCheck == IS_PRESENT){
-            System.out.println("Employee is present");
+        final int IS_PRESENT = 1;
+        final int WAGE_PER_HR = 20;
+        int empHR = 0;
+        double empCheck = Math.floor((Math.random() * 10)) % 2;
+        System.out.println(IS_PRESENT);
+        if(empCheck == IS_PRESENT) {
+            empHR = 8;
         }
-        else{
-            System.out.println("Employee is absent");
-        }
+        int empWage = WAGE_PER_HR * empHR;
+        System.out.println("Employee wage: "+empWage);
     }
 }
